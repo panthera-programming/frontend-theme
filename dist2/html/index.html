@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <title>theme eg</title>
+<script defer src="dist/app.js"></script><link href="dist/../css/app.css" rel="stylesheet"></head>
+<body>
+    <header>
+        <nav>
+            <span class="title">Meladen Admin</span>
+            <span>
+                <span class="material-symbols-outlined">logout</span>
+            </span>
+        </nav>
+    </header>
+    <aside class="d-flex flex-column justify-content-between">
+        <ul>
+            <li data-modal-target="#staff-form" class="sidebar-li" class="sidebar-li"><span>Create Staff</span></li>
+            <li class="sidebar-li"><span>Products</span></li>
+            <li class="sidebar-li drop-down-toggle">
+                <span>Clients</span>
+                <div class="drop-down-menu d-none">
+                    <a href="" class="drop-down-menu-item">Product Name 1</a>
+                    <a href="" class="drop-down-menu-item">Product Name 2</a>
+                    <a href="" class="drop-down-menu-item">Product Name 3</a>
+                    <a href="" class="drop-down-menu-item">Product Name 4</a>
+                    <a href="" class="drop-down-menu-item">Product Name 5</a>
+                </div>
+            </li>
+        </ul>
+        <div>
+            <div>
+                <img src="../images/real-estate-house-1.jpg" alt="house picture">
+            </div>
+        </div>
+    </aside>
+    <main>
+        <section class="section-properties col-10 mx-auto">
+            <div class="col-10 mx-auto">
+                <h4 class="text-center">Availabe Properties</h4>
+                <div>
+                    <div class="d-flex align-items-end justify-content-end" style="margin-bottom: 1.5rem;">
+                        <span data-modal-target="#property-form" class="new-property-btn table-btn btn">New Property</span>
+                    </div>
+                    <table class="col-10 table table-bordered table-hover">
+                        <thead class="col-12">
+                            <tr class="col-12">
+                                <th scope="column" class="col-2">Id</th>
+                                <th scope="column" class="col-6">Name</th>
+                                <th scope="column" class="col-5">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider prop-table-content-area">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="section-properties col-10 mx-auto">
+            <div class="col-10 mx-auto">
+                <h4 class="text-center prop-name-area">Property Name</h4>
+                <div>
+                    <div class="div-table-menu d-flex justify-content-between align-items-center">
+                        <span type="button" class="btn btn-outline-danger">
+                            <span data-modal-target="#client-form" class="icon material-symbols-outlined">person_add</span>
+                        </span>
+                        <div class="div-notification col-4 d-flex justify-content-between">
+                            <span data-modal-target="#email-form" type="button" class="table-btn btn">Bulk Mail</span>
+                            <span data-modal-target="#sms-form" type="button" class="table-btn btn">Bulk SMS</span>
+                        </div>
+                    </div>
+                    <table class="col-10 table table-bordered table-hover">
+                        <thead class="col-12">
+                            <tr class="col-12">
+                                <th scope="column" class="col-1">Id</th>
+                                <th scope="column" class="col-4">Name</th>
+                                <th scope="column" class="col-3">Email</th>
+                                <th scope="column" class="col-3">Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider client-table-content-area">
+                            <tr>
+                                <th scope="row" class="col-1">1</th>
+                                <td class="col-4">Panthera Nestah</td>
+                                <td class="col-3">pantheranestah@gmail.com</td>
+                                <td class="col-3">+254798765432</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <div class="mordal client-form d-none" id="client-form">
+            <div class="col-10 mx-auto d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>
+                        Add Client
+                    </span>
+                    <span class="close-form-btn" style="font-size: 35px;" data-close-button>&times;</span>
+                </div>
+                <div>
+                    <form class="d-flex justify-content-between flex-column" action="">
+                        <div class="input-group d-flex justify-content-between">
+                            <label for="client-name">Client Name</label>
+                            <input id="client-name" name="name" type="text" placeholder="john doe"/>
+                        </div>
+                        <div class="input-group d-flex justify-content-between">
+                            <label for="client-email">Client Email</label>
+                            <input id="client-email" name="email" type="email" placeholder="johndoe@example.com"/>
+                        </div>
+                        <div class="input-group d-flex justify-content-between">
+                            <label for="client-phone">Client Phone</label>
+                            <input id="client-phone" name="phone" type="text" placeholder="+25412345678"/>
+                        </div>
+                        <div  class="submit-btn" style="width: 80px;margin-top: 2rem;">
+                            <input type="submit" class=" btn" value="Send" style="width: 80px;"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mordal staff-form d-none" id="staff-form">
+            <div class="col-10 mx-auto d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>
+                        Create Staff
+                    </span>
+                    <span class="close-form-btn" style="font-size: 35px;" data-close-button>&times;</span>
+                </div>
+                <div>
+                    <form class="d-flex justify-content-between flex-column" action="">
+                        <div class="input-group d-flex justify-content-between">
+                            <label for="staff-name">Staff Name</label>
+                            <input id="staff-name" name="name" type="text" placeholder="john doe"/>
+                        </div>
+                        <div class="input-group d-flex justify-content-between">
+                            <label for="staff-email">Staff Email</label>
+                            <input id="staff-email" name="email" type="email" placeholder="johndoe@example.com"/>
+                        </div>
+                        <div  class="submit-btn" style="width: 80px;margin-top: 1rem;">
+                            <input type="submit" class=" btn" value="Send" style="width: 80px;"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mordal property-form d-none" id="property-form">
+            <div class="col-10 mx-auto d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>
+                        Add Property
+                    </span>
+                    <span class="close-form-btn" style="font-size: 35px;" data-close-button>&times;</span>
+                </div>
+                <div>
+                    <form class="d-flex justify-content-between flex-column" action="">
+                        <div class="input-group d-flex justify-content-between">
+                            <label for="property-name">Name</label>
+                            <input id="property-name" name="name" type="text"/>
+                        </div>
+                        <div class="input-group d-flex justify-content-between">
+                            <label for="property-value">Value</label>
+                            <input id="property-value" name="value" type="text"/>
+                        </div>
+                        <div  class="submit-btn" style="width: 80px;margin-top: 1rem;">
+                            <input type="submit" class=" btn" value="Send" style="width: 80px;"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mordal email-form d-none" id="email-form">
+            <div class="col-10 mx-auto d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>
+                        Email Clients
+                    </span>
+                    <span class="close-form-btn" style="font-size: 35px;" data-close-button>&times;</span>
+                </div>
+                <div>
+                    <form action="">
+                        <div>
+                            <textarea width="250px" style="resize:none;height: 150px;" name="message" placeholder="Write message here...">
+
+                            </textarea>
+                        </div>
+                        <div  class="submit-btn" style="width: 80px;margin-top: 3rem;">
+                            <input type="submit" class=" btn" value="Send" style="width: 80px;"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mordal sms-form d-none" id="sms-form">
+            <div class="col-10 mx-auto d-flex flex-column justify-content-between">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span>
+                        SMS Clients
+                    </span>
+                    <span class="close-form-btn" style="font-size: 35px;" data-close-button>&times;</span>
+                </div>
+                <div>
+                    <form action="">
+                        <div>
+                            <textarea width="250px" style="resize:none;height: 150px;" name="message" placeholder="Write message here...">
+
+                            </textarea>
+                        </div>
+                        <div  class="submit-btn" style="width: 80px;margin-top: 3rem;">
+                            <input type="submit" class=" btn" value="Send" style="width: 80px;"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="d-none" id="overlay"></div>
+    </main>
+    <footer>
+        <div>
+            <div>
+                <p>Client Service with compassion..!</p>
+                <p>Your realest Real Estate!</p>
+                <p>Meladen Properties ltd &copy; 2023 </p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/index.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
